@@ -1,0 +1,126 @@
+.home-section {
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 85px 90px;
+    background: linear-gradient(135deg, var(--dark), var(--navy), var(--blue));
+}
+
+.home-text {
+    width: 55%;
+    max-width: 720px;
+    text-align: left;
+}
+
+.home-text h2 {
+    margin: 0 0 24px;
+    color: var(--white);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.08;
+}
+
+.home-text p {
+    color: #dbeafe;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--dark);
+    border: 2px solid var(--gold);
+}
+
+.btn-secondary {
+    color: var(--gold);
+    border: 2px solid var(--gold);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(245, 158, 11, 0.28);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+.home-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-image img {
+    width: 390px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 36px;
+    border: 8px solid rgba(245, 158, 11, 0.8);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.42);
+    transition: 0.4s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        padding: 60px 25px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-text,
+    .home-image {
+        width: 100%;
+    }
+
+    .home-text {
+        text-align: center;
+    }
+
+    .home-text h2 {
+        font-size: 40px;
+    }
+
+    .home-text p {
+        font-size: 17px;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+    .home-image img {
+        width: 285px;
+        height: 365px;
+    }
+}

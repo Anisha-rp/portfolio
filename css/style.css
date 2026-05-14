@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --dark: #0f172a;
+    --navy: #1e293b;
+    --blue: #334155;
+    --gold: #f59e0b;
+    --cream: #f8f5ef;
+    --soft: #eef2f7;
+    --white: #ffffff;
+    --text: #1f2937;
+    --muted: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo span {
+    display: block;
+    margin-top: 6px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background-color: var(--gold);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.tagline {
+    margin: 0 0 12px;
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.page-title,
+.contact-title,
+.projecten-title {
+    max-width: 780px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.page-title h2,
+.contact-title h2,
+.projecten-title h2 {
+    margin: 0 0 14px;
+    color: var(--dark);
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.page-title p,
+.contact-title p,
+.projecten-title p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 22px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 20px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .page-title h2,
+    .contact-title h2,
+    .projecten-title h2 {
+        font-size: 40px;
+    }
+
+    .page-title p,
+    .contact-title p,
+    .projecten-title p {
+        font-size: 16px;
+    }
+}
